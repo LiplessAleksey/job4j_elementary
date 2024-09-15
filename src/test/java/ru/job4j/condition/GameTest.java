@@ -18,16 +18,16 @@ public class GameTest {
 
     @Test
     void whenSuperMarioThenStartSuperMario() {
-        testMenu("super mario", "Start - super mario\r\n");
+        testMenu("super mario", "Start - super mario\n");
     }
 
     @Test
     void whenTanksThenStartTanks() {
-        testMenu("tanks", "Start - tanks\r\n");
+        testMenu("tanks", "Start - tanks\n");
     }
 
     @Test
     void whenTetrisThenStartTetris() {
-        testMenu("tetris", "Start - tetris\r\n");
+        testMenu("tetris", "Start - tetris\n");
     }
 }
