@@ -12,4 +12,22 @@ class MaxTest {
         int expected = 2;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void whenMax2To1Then2() {
+        int left = 2;
+        int right = 1;
+        int result = Max.max(left, right);
+        int expected = 2;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenMax1To1Then1() {
+        int left = 1;
+        int right = 1;
+        int result = Max.max(left, right);
+        int expected = 1;
+        assertThat(result).isEqualTo(expected);
+    }
 }
