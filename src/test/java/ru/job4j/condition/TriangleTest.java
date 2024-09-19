@@ -6,9 +6,6 @@ import static org.assertj.core.api.Assertions.offset;
 
 class TriangleTest {
 
-    /**
-     * Проверка существования треугольника с равными сторонами.
-     */
     @Test
     void whenExist() {
         double ab = 2.0;
@@ -18,9 +15,6 @@ class TriangleTest {
         assertThat(result).isTrue();
     }
 
-    /**
-     * Проверка несуществования треугольника с неравными сторонами.
-     */
     @Test
     void whenNotExist() {
         double ab = 1.0;
@@ -30,9 +24,6 @@ class TriangleTest {
         assertThat(result).isFalse();
     }
 
-    /**
-     * Проверка существования треугольника с числами с плавающей точкой.
-     */
     @Test
     void whenFloatPointExist() {
         double ab = 2.5;
@@ -42,9 +33,6 @@ class TriangleTest {
         assertThat(result).isTrue();
     }
 
-    /**
-     * Проверка несуществования треугольника с числами с плавающей точкой.
-     */
     @Test
     void whenFloatPointNotExist() {
         double ab = 1.0;
@@ -54,9 +42,6 @@ class TriangleTest {
         assertThat(result).isFalse();
     }
 
-    /**
-     * Проверка с числами с плавающей точкой и погрешностью.
-     */
     @Test
     void whenFloatPointCloseTo() {
         float ab = 1.0000001F;
@@ -66,9 +51,6 @@ class TriangleTest {
         assertThat(result).isTrue();
     }
 
-    /**
-     * Проверка существования треугольника с отрицательными значениями.
-     */
     @Test
     void whenNegativeValues() {
         double ab = -2.0;
@@ -78,9 +60,6 @@ class TriangleTest {
         assertThat(result).isFalse();
     }
 
-    /**
-     * Проверка существования треугольника с нулевыми значениями.
-     */
     @Test
     void whenZeroValues() {
         double ab = 0.0;
@@ -90,9 +69,6 @@ class TriangleTest {
         assertThat(result).isFalse();
     }
 
-    /**
-     * Проверка несуществования треугольника, когда сумма двух сторон равна третьей.
-     */
     @Test
     void whenSumOfTwoSidesEqualsThird() {
         double ab = 3.0;
@@ -102,9 +78,6 @@ class TriangleTest {
         assertThat(result).isFalse();
     }
 
-    /**
-     * Проверка треугольника с большими значениями.
-     */
     @Test
     void whenLargeNumbers() {
         double ab = Double.MAX_VALUE;
