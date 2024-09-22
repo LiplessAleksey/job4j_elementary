@@ -67,4 +67,34 @@ public class CounterTest {
         int expected = -45;
         assertThat(expected).isEqualTo(Counter.sum(start, finish));
     }
+
+    @Test
+    @DisplayName("Sum = 30: Start = 1, Finish = 10")
+    void whenSumEvenNumbersFromOneToTenThenThirty() {
+        int start = 1;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 30;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    @DisplayName("Sum = 0: Start = -10, Finish = 10")
+    void whenSumEvenNumbersFromNegativeTenToTenThenZero() {
+        int start = -10;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 0;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    @DisplayName("Sum = 10: Start = 10, Finish = 10")
+    void whenSumEvenNumbersFrom10To10ThenTen() {
+        int start = 10;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 10;
+        assertThat(result).isEqualTo(expected);
+    }
 }
